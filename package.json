@@ -1,0 +1,11 @@
+{
+  "name": "lambda-bookself",
+  "version": "1.0.0",
+  "description": "Dicoding Submission.",
+  "main": "./src/scripts/main.js",
+  "repository": "https://github.com/Alphabethika-CodeHub/Lambda-Bookself.git",
+  "author": "Daffa Nabil Hartono",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
