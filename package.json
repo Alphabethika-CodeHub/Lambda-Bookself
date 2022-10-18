@@ -1,6 +1,7 @@
 {
   "name": "lambda-bookself",
   "version": "1.0.0",
+  "type": "module",
   "description": "Dicoding Submission.",
   "main": "./src/scripts/main.js",
   "repository": "https://github.com/Alphabethika-CodeHub/Lambda-Bookself.git",

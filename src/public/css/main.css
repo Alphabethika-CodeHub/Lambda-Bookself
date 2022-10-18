@@ -1,14 +1,19 @@
+* {
+  font-family: "poppins";
+}
+
 .lb-nav {
     background-color: #FF9551;
 }
 
 .lb-footer {
-    position: fixed;
-    left: 0;
     bottom: 0;
-    width: 100%;
+    margin: 20px auto 20px auto;
+    width: 20%;
+    border-radius: 15px;
     text-align: center;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: aliceblue;
 }
 
 .lb-z-1 {

@@ -10,10 +10,13 @@
   <link rel="stylesheet" href="./public/thirdParty/bulma/css/bulma.min.css">
   <link rel="stylesheet" href="./public/thirdParty/flickity/css/flickity.css">
   <link rel="stylesheet" href="./public/css/main.css">
+  <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+
 </head>
 
 <body>
-  <nav class="navbar lb-nav" role="navigation" aria-label="main navigation">
+  <nav class="navbar lb-nav" style="font-weight: bold;" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         Lambda Bookself
@@ -78,6 +81,7 @@
 
     <h1 class="title is-2 m-3">Today Best Books!</h1>
     <hr>
+
     <div class="carousel" data-flickity='{ "groupCells": true }'>
       <div id="carousel_content"></div>
       <div style="width: 350px; margin: 20px;" class="card">
@@ -110,14 +114,15 @@
         <footer class="card-footer">
           <a href="#" class="card-footer-item">Save</a>
           <a href="#" class="card-footer-item">Edit</a>
-          <a href="#" class="card-footer-item">Delete</a>
         </footer>
       </div>
     </div>
+
     <span>Api by <a href="https://developers.google.com/books"><span class="tag is-warning">Google
           Books
           API</span></a></span>
-    <div class="columns is-desktop">
+
+    <div class="columns is-desktop mt-3">
       <div class="column">
         <div class="card">
           <div class="card-image">
@@ -239,7 +244,105 @@
         </div>
       </div>
     </div>
+
+    <main id="main_content">main_content</main>
+
+    <button class="js-modal-trigger" data-target="modal-js-example">
+      Open JS example modal
+    </button>
+
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Form Simpan Buku Kesukaan</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label">Judul</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g Alex Smith">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Penulis</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Tahun</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">
+              Deskripsi
+            </label>
+            <div class="control">
+              <textarea class="textarea input" placeholder=""></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">
+              Genre
+            </label>
+            <div class="control">
+              <div class="tags">
+                <button class="button tag">Sci-fi</button>
+                <button class="button tag">Action</button>
+                <button class="button tag">Adventure</button>
+                <button class="button tag">Romance</button>
+                <button class="button tag">Drama</button>
+                <button class="button tag">Anime</button>
+                <button class="button tag">Fiction</button>
+                <button class="button tag">Novel</button>
+                <button class="button tag">Nine</button>
+                <button class="button tag">Ten</button>
+                <button class="button tag">Eleven</button>
+                <button class="button tag">Twelve</button>
+                <button class="button tag">Thirteen</button>
+                <button class="button tag">Fourteen</button>
+                <button class="button tag">Fifteen</button>
+                <button class="button tag">Sixteen</button>
+                <button class="button tag">Seventeen</button>
+                <button class="button tag">Eighteen</button>
+                <button class="button tag">Nineteen</button>
+                <button class="button tag">Twenty</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">
+              Status Buku
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer" checked>
+              Belum Dibaca
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Sudah Dibaca
+            </label>
+          </div>
+
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" id="save_button">Tambahkan</button>
+          <button class="button">Batalkan</button>
+        </footer>
+      </div>
+    </div>
+
   </div>
+
 
   <footer class="lb-footer">
     <div class="content has-text-centered">
@@ -250,21 +353,9 @@
   </footer>
 
   <script src="public/thirdParty/flickity/js/flickity.pkgd.min.js"></script>
-
-  <script>
-    var elem = document.querySelector('.main-carousel');
-    var flkty = new Flickity(elem, {
-      // options
-      cellAlign: 'left',
-      contain: true
-    });
-
-    // element argument can be a selector string
-    //   for an individual element
-    // var flkty = new Flickity('.main-carousel', {
-      // options
-    // });
-  </script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/utils/bulma_main.js"></script>
+  <script type="module" src="scripts/utils/flickity_main.js"></script>
 </body>
 
 </html>
